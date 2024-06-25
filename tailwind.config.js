@@ -7,7 +7,17 @@ module.exports = withMT({
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'lato': ['"Lato"', 'sans-serif'],
+        'montserrat': ['"Montserrat"', 'sans-serif'],
+        'playwrite-mx': ['"Playwrite MX"', 'serif'],
+        'playwrite-ng-modern': ['"Playwrite NG Modern"', 'serif'],
+        'poppins': ['"Poppins"', 'sans-serif'],
+        'roboto': ['"Roboto"', 'sans-serif'],
+        'ubuntu': ['"Ubuntu"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 })
