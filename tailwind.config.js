@@ -16,6 +16,7 @@ module.exports = withMT({
         'poppins': ['"Poppins"', 'sans-serif'],
         'roboto': ['"Roboto"', 'sans-serif'],
         'ubuntu': ['"Ubuntu"', 'sans-serif'],
+        'monospce': ["Inconsolata", "monospace"]
       },
     },
   },
