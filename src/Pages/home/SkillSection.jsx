@@ -79,10 +79,11 @@ const SkillSection = () => {
     const shortedTechnicalSkill = [...technicalSkills].sort((a, b) => a.skill.localeCompare(b.skill));
     const sortedOtherSkills = [...otherSklill].sort((a, b) => a.skill.localeCompare(b.skill));
     return (
-        <>
-            <div className="mt-5 border-t shadow border-black rounded-md">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-6">
+
+            <div className="mt-5 border-t shadow border-black rounded-md p-6 pt-0">
                 <Subtitle title={'Technical'} />
-                <div className=' p-4 grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {shortedTechnicalSkill.map((item, index) => (
                         <SkillBar key={index} skill={item.skill} level={item.level} icon={item.icon} />
                     ))}
@@ -90,13 +91,13 @@ const SkillSection = () => {
             </div>
             <div className="mt-5 border-t shadow border-black rounded-md p-6 pt-0">
                 <Subtitle title={'Tools'} />
-                <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {sortedOtherSkills.map((item, index) => (
                         <SkillBar key={index} skill={item.skill} level={item.level} icon={item.icon} />
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

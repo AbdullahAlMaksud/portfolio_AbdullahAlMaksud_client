@@ -2,15 +2,23 @@ import { Button, Card, Typography } from '@material-tailwind/react';
 import { BiGlobe } from 'react-icons/bi';
 import { BsEye, BsEyeFill, BsGithub } from 'react-icons/bs';
 import { FaDownload } from 'react-icons/fa';
+
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
+import 'swiper/css/effect-cards';
 
 // import './styles.css';
+
+// import required modules
+import { EffectCards } from 'swiper/modules';
+
+
+
+import './styles.css';
 // import { Autoplay, Pagination } from 'swiper/modules';
 import ProjectDisplay from './ProjectDisplay';
 import SkillBar from './SkillBar';
@@ -65,25 +73,44 @@ const Home = () => {
         </div>
 
 
-        <div className='col-span-1 w-60 md:col-start-4 md:col-end-6 flex justify-center items-center lg:justify-end mx-auto'>
-          <div className='bg-gray-900 hidden md:flex md:h-[108.5%] lg:h-[107%] absolute md:w-44 lg:w-64 border-b border-dashed -z-10 -top-7 right-1 overflow-hidden'>
+        <div className='col-span-1 w-60 md:col-start-4 md:col-end-6 flex justify-center items-center lg:justify-end lg:w-full mx-auto'>
+          <div className='bg-gray-900 hidden md:flex md:h-[108.5%] lg:h-[108%] absolute md:w-56 lg:w-64 border-b border-dashed -z-10 -top-7 right-1 overflow-hidden'>
           </div>
-          <div className='bg-black flex md:hidden h-40 w-full -mx-4 rounded-t-xl rounded-tr-full absolute md:w-44 lg:w-64  border-b border-dashed -z-10 -bottom-1 overflow-clip'>
+          <div className='bg-black flex md:hidden h-80 w-full -mx-4 rounded-t-xl rounded-tr-full absolute md:w-44 lg:w-64  border-b border-dashed -z-10 -bottom-1 overflow-clip'>
           </div>
-          <div className='bg-gray-900 flex md:hidden h-10 rounded-t-full w-full  absolute md:w-44 lg:w-64  border-b border-dashed z-30 -bottom-1 shadow-lg shadow-white'>
+          <div className='bg-gray-900 flex md:hidden h-5 rounded-tr-full w-full  absolute md:w-44 lg:w-64  border-t border-dotted z-30 -bottom-1 shadow-lg shadow-white'>
           </div>
           <img className='w-60 z-10' src={'./profile.png'} alt="" />
         </div>
       </section>
 
 
+
       <section id='project' className=''>
-        <div className='border-b border-black'>
+        <div className='border-b border-black mb-5'>
           <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Project</h2>
         </div>
-        <ProjectDisplay title={'Project WorkOn'} description={'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci!!'} img1={'./workon-home.png'} img2={'./workon-full.jpeg'} img3={'./workon-home.png'} reverseInput={false} live={'https://project-workon.web.app/'}></ProjectDisplay>
-        <ProjectDisplay title={'Project StudyBee'} description={'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci!!'} img1={'./studybee-full.png'} img2={'./studybee-full.jpeg'} img3={'./studybee-full.png'} reverseInput={true} live={'https://project-studybee.web.app/'}></ProjectDisplay>
-        <ProjectDisplay title={'Project ClayNest'} description={'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci dolor sit, amet consectetur adipisicing elit. Doloribus, adipisci!!'} img1={'./claynest.jpeg'} img2={'./claynest.jpeg'} img3={'./claynest.jpeg'} live={'https://project-claynest.web.app/'} reverseInput={false}></ProjectDisplay>
+        <div className='bg-transparent w-10/12 md:w-4/5 mx-auto'>
+          <Swiper
+            effect={'cards'}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+          >
+
+            <SwiperSlide>
+              <ProjectDisplay title={'Project WorkOn'} description={'Through this Simple React app, office workers and their work can be managed. It has features such as changing the role of employees and making payments.'} img1={'./workon-home.png'} img2={'./workon-full.jpeg'} img3={'./workon-home.png'} reverseInput={false} live={'https://project-workon.web.app/'} github={'https://github.com/AbdullahAlMaksud/project-workon-client'} github2={'https://github.com/AbdullahAlMaksud/project-workon-server'}></ProjectDisplay>
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProjectDisplay title={'Project StudyBee'} description={'This project is a service sharing application built using the MERN stack. It facilitates educators to post and sell their services, allowing users to hire them.'} img1={'./studybee-full.png'} img2={'./studybee-full.jpeg'} img3={'./studybee-full.png'} reverseInput={true} live={'https://project-studybee.web.app/'} github={'https://github.com/AbdullahAlMaksud/project-studybee-client'} github2={'https://github.com/AbdullahAlMaksud/project-studybee-server'}></ProjectDisplay>
+
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProjectDisplay title={'Project ClayNest'} description={'A MERN stack project designed for a ceramic and pottery company, allowing users to manage profiles, update personal information, and add/edit product details on the website.'} img1={'./claynest.jpeg'} img2={'./claynest.jpeg'} img3={'./claynest.jpeg'} live={'https://project-claynest.web.app/'} reverseInput={false} github={'https://github.com/AbdullahAlMaksud/project-claynest-client'} github2={'https://github.com/AbdullahAlMaksud/project-claynest-server'}></ProjectDisplay>
+
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </section>
 
       <section id='skills' className='mt-10'>

@@ -4,7 +4,7 @@ import Subtitle from '../../components/Subtitle';
 
 const EducationSection = () => {
     return (
-        <div>
+        <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
             <Card className="px-6 pb-6 mt-6 bg-white border-t border-black shadow rounded-md text-black">
                 <Subtitle title={'Masters of Science'} />
                 <div className='mb-4'>

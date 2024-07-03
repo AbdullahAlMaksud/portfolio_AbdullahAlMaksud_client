@@ -33,44 +33,51 @@ const ContactSection = () => {
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <p className='text-lg text-center pt-5 pb-2 text-black'>Drop a message</p>
-                <div className="mb-4 relative">
-                    <Input
-                        type="text"
-                        label="Name"
-                        placeholder="Enter your name"
-                        {...register('name', { required: true })}
-                        error={errors.name ? 'Name is required' : ''}
-                        icon={<FaUser className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-                    />
+                <div>
+                    <div className='lg:grid lg:grid-cols-1 lg:gap-3'>
+                        <div className='lg:flex lg:w-full lg:justify-center lg:gap-3'>
+                            <div className="mb-4 relative">
+                                <Input
+                                    type="text"
+                                    label="Name"
+                                    placeholder="Enter your name"
+                                    {...register('name', { required: true })}
+                                    error={errors.name ? 'Name is required' : ''}
+                                    icon={<FaUser className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+                                />
+                            </div>
+                            <div className="mb-4 relative">
+                                <Input
+                                    type="email"
+                                    label="Email"
+                                    placeholder="Enter your email"
+                                    {...register('email', { required: true })}
+                                    error={errors.email ? 'Email is required' : ''}
+                                    icon={<FaEnvelope className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+                                />
+                            </div>
+                            <div className="mb-4 relative">
+                                <Input
+                                    type="tel"
+                                    label="Phone"
+                                    placeholder="Enter your phone number"
+                                    {...register('phone', { required: true })}
+                                    error={errors.phone ? 'Phone number is required' : ''}
+                                    icon={<FaPhone className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
+                                />
+                            </div>
+                        </div>
+                        <div className="mb-4">
+                            <Textarea
+                                label="Write your message here!"
+                                // placeholder="Enter your message"
+                                {...register('message', { required: true })}
+                                error={errors.message ? 'Message is required' : ''}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className="mb-4 relative">
-                    <Input
-                        type="email"
-                        label="Email"
-                        placeholder="Enter your email"
-                        {...register('email', { required: true })}
-                        error={errors.email ? 'Email is required' : ''}
-                        icon={<FaEnvelope className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-                    />
-                </div>
-                <div className="mb-4 relative">
-                    <Input
-                        type="tel"
-                        label="Phone"
-                        placeholder="Enter your phone number"
-                        {...register('phone', { required: true })}
-                        error={errors.phone ? 'Phone number is required' : ''}
-                        icon={<FaPhone className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400" />}
-                    />
-                </div>
-                <div className="mb-4">
-                    <Textarea
-                        label="Write your message here!"
-                        // placeholder="Enter your message"
-                        {...register('message', { required: true })}
-                        error={errors.message ? 'Message is required' : ''}
-                    />
-                </div>
+
                 <Button type="submit" color="black" className='w-full rounded-md'>
                     Submit
                 </Button>
