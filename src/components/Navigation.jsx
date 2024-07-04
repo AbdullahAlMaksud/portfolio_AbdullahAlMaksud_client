@@ -16,7 +16,7 @@ const Navigation = () => {
                 <NavButton tooltip={"Home"} tooltipId={'my-home'} to={'home'} icon={GoHome}></NavButton>
                 <NavButton tooltip={"My Project"} tooltipId={'my-project'} to={'project'} icon={GoProject}></NavButton>
                 <NavButton tooltip={"My Skill"} tooltipId={'my-sklill'} to={'skills'} icon={GoCode}></NavButton>
-                <NavButton tooltip={"My Info"} tooltipId={'my-biodata'} to={'about'} icon={FaGraduationCap}></NavButton>
+                <NavButton tooltip={"My Education"} tooltipId={'my-biodata'} to={'about'} icon={FaGraduationCap}></NavButton>
 
             </div>
             <div>

@@ -1,24 +1,15 @@
-import { Button, Card, Typography } from '@material-tailwind/react';
+import { Button } from '@material-tailwind/react';
 import { BiGlobe } from 'react-icons/bi';
 import { BsEye, BsEyeFill, BsGithub } from 'react-icons/bs';
 import { FaDownload } from 'react-icons/fa';
-
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-cards';
-
-// import './styles.css';
-
-// import required modules
 import { EffectCards } from 'swiper/modules';
-
-
-
 import './styles.css';
+// Import Swiper styles
+// import required modules
 // import { Autoplay, Pagination } from 'swiper/modules';
 import ProjectDisplay from './ProjectDisplay';
 import SkillBar from './SkillBar';
@@ -30,16 +21,13 @@ import FAQSection from './FAQSection';
 import { Typewriter } from 'react-simple-typewriter';
 import SkillSection from './SkillSection';
 import EducationSection from './EducationSection';
-import Subtitle from '../../components/Subtitle';
 
 
 
 
 const Home = () => {
-
-
   return (
-    <div id='home' className='container mx-auto w-11/12 mb-5 pt-5'>
+    <div id='home' className='container mx-auto mb-5 pt-5'>
       <section className='relative flex flex-col gap-10 md:gap-0 md:grid md:grid-cols-5 mb-10'>
 
         <div className='col-span-2 md:col-span-3 flex flex-col justify-center'>
@@ -61,11 +49,21 @@ const Home = () => {
           </div>
 
           <div>
-            <Button className='mt-10 bg-black normal-case hidden md:flex gap-3 rounded-md'>
+            {/* https://drive.google.com/file/d/1rOWwzT7BjCI8ni2Z7BkZGvJQ6EbCVsBT/view?usp=drive_link */}
+            <Button
+              onClick={() => {
+                window.open('https://drive.google.com/file/d/1rOWwzT7BjCI8ni2Z7BkZGvJQ6EbCVsBT/view?usp=drive_link', '_blank');
+              }}
+              className='mt-10 bg-black normal-case hidden md:flex gap-3 rounded-md'
+            >
               <FaDownload />
               Download the resume
             </Button>
-            <Button className='mt-10 bg-black normal-case md:hidden flex gap-3 font-normal rounded-md'>
+            <Button
+              onClick={() => {
+                window.open('https://drive.google.com/file/d/1rOWwzT7BjCI8ni2Z7BkZGvJQ6EbCVsBT/view?usp=drive_link', '_blank');
+              }}
+              className='mt-10 bg-black normal-case md:hidden flex gap-3 font-normal rounded-md'>
               <FiDownload className='' />
               RESUME
             </Button>
@@ -90,7 +88,7 @@ const Home = () => {
         <div className='border-b border-black mb-5'>
           <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Project</h2>
         </div>
-        <div className='bg-transparent w-10/12 md:w-4/5 mx-auto'>
+        <div className='bg-transparent w-10/12 md:mx-auto'>
           <Swiper
             effect={'cards'}
             grabCursor={true}
