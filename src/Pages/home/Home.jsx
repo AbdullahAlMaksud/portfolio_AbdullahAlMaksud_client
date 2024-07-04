@@ -46,6 +46,9 @@ const Home = () => {
             </p>
             <h2 className='font-bold md:text-4xl text-3xl'>Abdullah Al Maksud</h2>
             <span className='bg-black w-3/5 lg:w-40 h-1 rounded-tr-full animate-bounce mt-1 duration-200'></span>
+            <p className='mt-8'>
+              Frontend developer specializing in the MERN stack. Passionate about building innovative web applications using HTML, CSS, Tailwind CSS, JavaScript, React, MongoDB, Express.js, and Node.js. Dedicated to creating seamless user experiences and efficient, scalable code. Currently pursuing a Master of Science in Applied Physics and Electronics at Jahangirnagar University. Always eager to learn new technologies and take on challenging projects.
+            </p>
           </div>
 
           <div>
@@ -54,7 +57,7 @@ const Home = () => {
               onClick={() => {
                 window.open('https://drive.google.com/file/d/1rOWwzT7BjCI8ni2Z7BkZGvJQ6EbCVsBT/view?usp=drive_link', '_blank');
               }}
-              className='mt-10 bg-black normal-case hidden md:flex gap-3 rounded-md'
+              className='mt-10  bg-black normal-case hidden md:flex gap-3 rounded-md'
             >
               <FaDownload />
               Download the resume
@@ -80,7 +83,7 @@ const Home = () => {
           </div>
           <img className='w-60 z-10' src={'./profile.png'} alt="" />
         </div>
-      </section>
+      </section >
 
 
 
@@ -122,7 +125,7 @@ const Home = () => {
 
       <section id='about' className='mt-10'>
         <div className='border-b border-black'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>Education</h2>
+          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Education</h2>
         </div>
         <EducationSection />
       </section>
@@ -141,7 +144,7 @@ const Home = () => {
         <ContactSection />
       </section>
 
-    </div>
+    </div >
   );
 };
 

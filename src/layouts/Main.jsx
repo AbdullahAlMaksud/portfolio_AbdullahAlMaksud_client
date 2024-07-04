@@ -16,43 +16,21 @@ const Main = () => {
         setIsNavOpen(!isNavOpen);
     };
     return (
-
-        // <section className='overflow-hidden'>
-        //     <button onClick={toggleNav} className={isNavOpen ? ' rounded-md p-2 shadow-sm shadow-black/50 text-white absolute bottom-10 right-10 z-10 bg-black hover:shadow-none active:scale-95 duration-500 ease-out' : 'rounded-md p-2 shadow-sm shadow-black/50 text-white absolute bottom-10 right-10 z-10 bg-black hover:shadow-none active:scale-95 duration-500 ease-out'}>
-        //         {
-        //             isNavOpen ? <BsFullscreen className='text-4xl rotate-90 duration-500 ease-in-out' /> : <BsFullscreenExit className='text-4xl rotate-90 duration-500 ease-in-out' />
-        //         }
-
-
-        //     </button>
-
-
-        //     <div className='flex w-full'>
-        //         <aside className={isNavOpen === true ? '-translate-x-0 flex duration-1000 ease-out mb-5 max-h-screen' : `duration-1000 ease-out -translate-x-14`}>
-        //             <Navigation />
-        //         </aside>
-
-        //         <section className={isNavOpen === true ? 'duration-700 ease-out container w-11/12 ml-[5.3rem] ' : ' duration-700 ease-out container w-11/12 mx-auto '}>
-        //             <Outlet />
-        //             <Footer />
-        //         </section>
-        //     </div>
-        // </section>
-
-        // 
         <section className='overflow-hidden'>
 
-            <div className={isNavOpen ? 'flex z-50 relative -ml-16' : 'flex z-50 relative'} >
+            <div className={isNavOpen ? 'flex z-50' : 'flex z-50'} >
 
-                <div className={isNavOpen ? 'w-14 -translate-x-14 duration-500 ease-in' : 'max-h-screen duration-500 ease-in'}>
+                <div className={isNavOpen ? '-translate-x-14 duration-300 ease-in' : 'w-14 duration-300 ease-in'}>
                     <Navigation />
                     {/* Button to toggle navigation */}
                 </div>
-                <button onClick={toggleNav} className=' bottom-5 right-4 z-50 bg-white p-2 rounded-md shadow-md fixed'>
+
+                <button onClick={toggleNav} className=' bottom-5 right-4 z-50 bg-gray-900 text-white p-2 rounded-md shadow-md fixed'>
                     {isNavOpen ? <BsFullscreenExit /> : <BiFullscreen />}
                 </button>
-                <div className={isNavOpen ? 'w-full duration-700 ease-out' : 'w-[calc(100vw-3.5rem)] ml-14 duration-700 ease-out'}>
-                    <div className='container w-11/12 mx-auto'>
+
+                <div className={isNavOpen ? 'w-screen duration-500 ease-out ' : 'w-[calc(100vw-3.5rem)] lg:ml-12 ml-12 duration-500 ease-out '}>
+                    <div className='w-11/12 mx-auto'>
                         <Outlet />
                         <Footer />
                     </div>

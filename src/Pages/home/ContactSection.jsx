@@ -14,7 +14,7 @@ const ContactSection = () => {
     };
 
     return (
-        <Card className="px-6 pb-6 border-t border-black shadow mt-6 bg-white rounded-lg">
+        <Card className="px-6 pb-6 border-t border-black shadow mt-6 bg-transparent rounded-lg">
             <Subtitle title={'Connect with me'} />
             <p className='text-lg text-center pb-2 text-black'>My Social Links</p>
             <div className="flex justify-center space-x-4 mb-4">

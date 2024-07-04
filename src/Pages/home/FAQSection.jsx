@@ -54,7 +54,7 @@ const FAQSection = () => {
     ];
 
     return (
-        <Card className="p-6 pt-0 mt-6 border-t border-black rounded-md shadow">
+        <Card className="p-6 pt-0 mt-6 border-t border-black bg-transparent rounded-md shadow">
 
             <Subtitle title={'Frequently Asked Questions (FAQ)'} />
 
