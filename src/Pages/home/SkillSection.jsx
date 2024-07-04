@@ -96,7 +96,7 @@ const SkillSection = () => {
 
             <div className="mt-5 border-t shadow border-black rounded-md p-6 pt-0">
                 <Subtitle title={'Technical'} />
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {shortedTechnicalSkill.map((item, index) => (
                         <SkillBar key={index} skill={item.skill} level={item.level} icon={item.icon} color={item.color} />
                     ))}

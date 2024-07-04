@@ -51,7 +51,7 @@ const Main = () => {
                 <button onClick={toggleNav} className=' bottom-5 right-4 z-50 bg-white p-2 rounded-md shadow-md fixed'>
                     {isNavOpen ? <BsFullscreenExit /> : <BiFullscreen />}
                 </button>
-                <div className={isNavOpen ? 'w-full duration-700 ease-out' : 'w-full ml-14 duration-700 ease-out'}>
+                <div className={isNavOpen ? 'w-full duration-700 ease-out' : 'w-[calc(100vw-3.5rem)] ml-14 duration-700 ease-out'}>
                     <div className='container w-11/12 mx-auto'>
                         <Outlet />
                         <Footer />
