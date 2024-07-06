@@ -8,6 +8,7 @@ import { CgClose } from 'react-icons/cg';
 import { IoCloseCircle } from 'react-icons/io5';
 import { BsFullscreen, BsFullscreenExit } from 'react-icons/bs';
 import { MdFormatIndentDecrease, MdFormatIndentIncrease } from 'react-icons/md';
+import { Toaster } from 'react-hot-toast';
 
 const Main = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -17,7 +18,7 @@ const Main = () => {
     };
     return (
         <section className='overflow-hidden'>
-
+            <Toaster />
             <div className={isNavOpen ? 'flex z-50' : 'flex z-50'} >
 
                 <div className={isNavOpen ? '-translate-x-14 duration-300 ease-in' : 'w-14 duration-300 ease-in'}>
@@ -36,6 +37,7 @@ const Main = () => {
                     </div>
                 </div>
             </div>
+
         </section>
     );
 };

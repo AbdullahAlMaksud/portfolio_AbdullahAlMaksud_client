@@ -3,18 +3,47 @@ import { useForm } from 'react-hook-form';
 import { Card, Typography, Input, Button, Textarea, IconButton } from '@material-tailwind/react';
 import { FaFacebook, FaGithub, FaLinkedin, FaGlobe, FaEnvelope, FaPhone, FaUser } from 'react-icons/fa';
 import Subtitle from '../../components/Subtitle';
+import { ToastContainer } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactSection = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
 
     const onSubmit = (data) => {
+        // data.preventDefault()
         console.log(data);
         // handle form submission here, e.g., send the data to your email or server
+        toast.success('Here is your toast.')
+        // toast.success('🦄 Wow so easy!', {
+        //     position: "top-right",
+        //     autoClose: 3000,
+        //     hideProgressBar: false,
+        //     closeOnClick: true,
+        //     pauseOnHover: true,
+        //     draggable: true,
+        //     progress: undefined,
+        //     theme: "light",
+        //     transition: Slide,
+        // });
+
     };
 
     return (
         <Card className="px-6 pb-6 border-t border-black shadow mt-6 bg-transparent rounded-lg">
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
+            <Toaster />
             <Subtitle title={'Connect with me'} />
             <p className='text-lg text-center pb-2 text-black'>My Social Links</p>
             <div className="flex justify-center space-x-4 mb-4">
