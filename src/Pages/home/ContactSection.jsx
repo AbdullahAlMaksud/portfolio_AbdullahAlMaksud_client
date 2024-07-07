@@ -5,16 +5,33 @@ import { FaFacebook, FaGithub, FaLinkedin, FaGlobe, FaEnvelope, FaPhone, FaUser 
 import Subtitle from '../../components/Subtitle';
 import { ToastContainer } from 'react-toastify';
 import toast, { Toaster } from 'react-hot-toast';
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
 
-    const onSubmit = (data) => {
-        // data.preventDefault()
+    const onSubmit = (data, e) => {
+        e.preventDefault()
         console.log(data);
+        console.log(e.target)
+
+        console.log(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+        emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, e.target, {
+            publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        })
+            .then(
+                () => {
+                    toast.success('Message sent successfully!');
+                },
+                (error) => {
+                    toast.error('Failed to send message.');
+                    console.error('EmailJS error:', error.text);
+                },
+            );
+
         // handle form submission here, e.g., send the data to your email or server
-        toast.success('Here is your toast.')
+        // toast.success('Here is your toast.')
         // toast.success('🦄 Wow so easy!', {
         //     position: "top-right",
         //     autoClose: 3000,
@@ -99,14 +116,12 @@ const ContactSection = () => {
                         <div className="mb-4">
                             <Textarea
                                 label="Write your message here!"
-                                // placeholder="Enter your message"
                                 {...register('message', { required: true })}
                                 error={errors.message ? 'Message is required' : ''}
                             />
                         </div>
                     </div>
                 </div>
-
                 <Button type="submit" color="black" className='w-full rounded-md dark:bg-red-900'>
                     Submit
                 </Button>
