@@ -94,7 +94,7 @@ const SkillSection = () => {
     return (
         <div className="lg:grid lg:grid-cols-2 lg:gap-6">
 
-            <div className="mt-5 border-t shadow border-black rounded-md p-6 pt-0">
+            <div className="mt-5 border-t shadow border-black dark:border-slate-300 rounded-md p-6 pt-0">
                 <Subtitle title={'Technical'} />
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                     {shortedTechnicalSkill.map((item, index) => (
@@ -102,7 +102,7 @@ const SkillSection = () => {
                     ))}
                 </div>
             </div>
-            <div className="mt-5 border-t shadow border-black rounded-md p-6 pt-0">
+            <div className="mt-5 border-t shadow border-black dark:border-slate-300 rounded-md p-6 pt-0">
                 <Subtitle title={'Tools'} />
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
                     {sortedOtherSkills.map((item, index) => (

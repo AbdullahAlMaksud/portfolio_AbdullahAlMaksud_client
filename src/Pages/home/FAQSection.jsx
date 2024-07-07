@@ -54,22 +54,23 @@ const FAQSection = () => {
     ];
 
     return (
-        <Card className="p-6 pt-0 mt-6 border-t border-black bg-transparent rounded-md shadow">
+        <Card className="p-6 pt-0 mt-6 border-t border-black dark:border-slate-300 bg-transparent dark:bg-slate-950 rounded-md shadow mb-10">
 
             <Subtitle title={'Frequently Asked Questions (FAQ)'} />
 
             {faqs.map((faq, index) => (
                 <Accordion key={index} open={open === index} icon={<></>}>
-                    <AccordionHeader onClick={() => handleOpen(index)} className="flex justify-between items-center text-base font-monospce">
+                    <AccordionHeader onClick={() => handleOpen(index)} className="flex justify-between items-center text-base font-monospce dark:text-white dark:border-b-slate-700">
                         <span>{faq.question}</span>
                         <span className="ml-auto">{open === index ? <FaChevronUp /> : <FaChevronDown />}</span>
                     </AccordionHeader>
-                    <AccordionBody className="text-gray-700 font-monospce">
+                    <AccordionBody className="text-gray-900  font-monospce dark:text-slate-100">
                         {faq.answer}
                     </AccordionBody>
                 </Accordion>
-            ))}
-        </Card>
+            ))
+            }
+        </Card >
     );
 };
 

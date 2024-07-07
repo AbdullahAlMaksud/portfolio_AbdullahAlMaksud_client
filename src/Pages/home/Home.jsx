@@ -21,6 +21,7 @@ import FAQSection from './FAQSection';
 import { Typewriter } from 'react-simple-typewriter';
 import SkillSection from './SkillSection';
 import EducationSection from './EducationSection';
+import Title from '../../components/Title';
 
 
 
@@ -57,10 +58,10 @@ const Home = () => {
               onClick={() => {
                 window.open('https://drive.google.com/file/d/1rOWwzT7BjCI8ni2Z7BkZGvJQ6EbCVsBT/view?usp=drive_link', '_blank');
               }}
-              className='mt-10  bg-black normal-case hidden md:flex gap-3 rounded-md'
+              className='mt-10  bg-black dark:bg-red-900 font-normal uppercase hidden md:flex gap-3 rounded-md'
             >
               <FaDownload />
-              Download the resume
+              Download resume
             </Button>
             <Button
               onClick={() => {
@@ -75,11 +76,11 @@ const Home = () => {
 
 
         <div className='col-span-1 w-60 md:col-start-4 md:col-end-6 flex justify-center items-center lg:justify-end lg:w-full mx-auto'>
-          <div className='bg-gray-900 hidden md:flex md:h-[108.5%] lg:h-[108%] absolute md:w-56 lg:w-64 border-b border-dashed -z-10 -top-7 right-1 overflow-hidden'>
+          <div className='bg-gray-900 dark:bg-white hidden md:flex md:h-[108.5%] lg:h-[108%] absolute md:w-56 lg:w-64 border-b border-dashed -z-10 -top-7 right-1 overflow-hidden'>
           </div>
-          <div className='bg-black flex md:hidden h-80 w-full -mx-4 rounded-t-xl rounded-tr-full absolute md:w-44 lg:w-64  border-b border-dashed -z-10 -bottom-1 overflow-clip'>
+          <div className='bg-black dark:bg-white flex md:hidden h-80 w-full -mx-4 rounded-t-xl rounded-tr-full absolute md:w-44 lg:w-64  border-b border-dashed -z-10 -bottom-1 overflow-clip'>
           </div>
-          <div className='bg-gray-900 flex md:hidden h-5 rounded-tr-full w-full  absolute md:w-44 lg:w-64  border-t border-dotted z-30 -bottom-1 shadow-lg shadow-white'>
+          <div className='bg-gray-900 dark:bg-white flex md:hidden h-5 rounded-tr-full w-full  absolute md:w-44 lg:w-64  border-t border-dotted z-30 -bottom-1 shadow-lg shadow-white'>
           </div>
           <img className='w-60 z-10' src={'./profile.png'} alt="" />
         </div>
@@ -88,10 +89,8 @@ const Home = () => {
 
 
       <section id='project' className=''>
-        <div className='border-b border-black mb-5'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Project</h2>
-        </div>
-        <div className='bg-transparent w-10/12 md:mx-auto'>
+        <Title text={'My Project'} />
+        <div className='bg-transparent w-10/12 md:mx-auto mt-5'>
           <Swiper
             effect={'cards'}
             grabCursor={true}
@@ -115,32 +114,21 @@ const Home = () => {
       </section>
 
       <section id='skills' className='mt-10'>
-        <div className='border-b border-black'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Skills</h2>
-
-        </div>
+        <Title text={'My Skills'} />
         <SkillSection />
       </section>
 
 
       <section id='about' className='mt-10'>
-        <div className='border-b border-black'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>My Education</h2>
-        </div>
+        <Title text={'My Education'} />
         <EducationSection />
       </section>
       <section id='faq' className='mt-10'>
-        <div className='border-b border-black'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>FAQ</h2>
-
-        </div>
+        <Title text={'FAQ'} />
         <FAQSection />
       </section>
-      <section id='contact' className='mt-10'>
-        <div className='border-b border-black'>
-          <h2 className='bg-black w-fit px-3 text-white rounded-t-md font-montserrat'>Contact Info</h2>
-
-        </div>
+      <section>
+        <Title text={'Contact Info'} />
         <ContactSection />
       </section>
 

@@ -30,7 +30,7 @@ const ContactSection = () => {
     };
 
     return (
-        <Card className="px-6 pb-6 border-t border-black shadow mt-6 bg-transparent rounded-lg">
+        <Card className="px-6 pb-6 border-t border-black dark:border-slate-300 shadow mt-6 bg-transparent rounded-lg">
             <ToastContainer
                 position="top-right"
                 autoClose={3000}
@@ -45,23 +45,23 @@ const ContactSection = () => {
             />
             <Toaster />
             <Subtitle title={'Connect with me'} />
-            <p className='text-lg text-center pb-2 text-black'>My Social Links</p>
+            <p className='text-lg text-center pb-2 text-black dark:text-slate-300'>My Social Links</p>
             <div className="flex justify-center space-x-4 mb-4">
-                <IconButton href="https://facebook.com/maksud51" color="black" className='border border-black rounded-md'>
+                <IconButton href="https://facebook.com/maksud51" color="black" className='border border-black rounded-md dark:bg-slate-300 text-lg dark:text-slate-950'>
                     <FaFacebook />
                 </IconButton>
-                <IconButton href="https://github.com/AbdullahAlMaksud" color="black" className='border border-black rounded-md'>
+                <IconButton href="https://github.com/AbdullahAlMaksud" color="black" className='border border-black rounded-md dark:bg-slate-300 text-lg dark:text-slate-950'>
                     <FaGithub />
                 </IconButton>
-                <IconButton href="https://linkedin.com/in/AbdullahAlMaksud" color="black" className='border border-black rounded-md'>
+                <IconButton href="https://linkedin.com/in/AbdullahAlMaksud" color="black" className='border border-black rounded-md dark:bg-slate-300 text-lg dark:text-slate-950'>
                     <FaLinkedin />
                 </IconButton>
-                <IconButton href="https://portfolio-abdullahalmaksud.web.app" color="black" className='border border-black rounded-md'>
+                <IconButton href="https://portfolio-abdullahalmaksud.web.app" color="black" className='border border-black rounded-md dark:bg-slate-300 text-lg dark:text-slate-950'>
                     <FaGlobe />
                 </IconButton>
             </div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <p className='text-lg text-center pt-5 pb-2 text-black'>Drop a message</p>
+                <p className='text-lg text-center pt-5 pb-2 text-black dark:text-slate-300'>Drop a message</p>
                 <div>
                     <div className='lg:grid lg:grid-cols-1 lg:gap-3'>
                         <div className='lg:flex lg:w-full lg:justify-center lg:gap-3'>
@@ -107,7 +107,7 @@ const ContactSection = () => {
                     </div>
                 </div>
 
-                <Button type="submit" color="black" className='w-full rounded-md'>
+                <Button type="submit" color="black" className='w-full rounded-md dark:bg-red-900'>
                     Submit
                 </Button>
             </form>

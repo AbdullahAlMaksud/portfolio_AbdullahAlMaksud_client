@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 
 const Footer = () => {
     return (
-        <footer className="bg-transparent w-11/12 mx-auto container dark:bg-gray-900">
+        <footer className="bg-transparent w-11/12 mx-auto">
             <div className="container flex flex-col items-center justify-between p-6 mx-auto space-y-4 sm:space-y-2 md:flex-row">
                 <Link>
                     <h2 className='font-playwrite-ng-modern'>Abdullah Al Maksud</h2>

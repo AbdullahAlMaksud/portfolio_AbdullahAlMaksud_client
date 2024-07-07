@@ -5,7 +5,7 @@ import Subtitle from '../../components/Subtitle';
 const EducationSection = () => {
     return (
         <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
-            <Card className="px-6 pb-6 mt-6 bg-transparent border-t border-black shadow rounded-md text-black">
+            <Card className="px-6 pb-6 mt-6 bg-transparent dark:bg-slate-950 border-t border-black dark:border-slate-200 shadow rounded-md text-black dark:text-white">
                 <Subtitle title={'Masters of Science'} />
                 <div className='mb-4'>
                     <h2 className='font-bold'>Subject:</h2>
@@ -25,7 +25,7 @@ const EducationSection = () => {
                 </div>
 
             </Card>
-            <Card className="px-6 pb-6 mt-6 bg-transparent border-t border-black shadow rounded-md text-black">
+            <Card className="px-6 pb-6 mt-6 bg-transparent dark:bg-slate-950 border-t border-black dark:border-slate-200 shadow rounded-md text-black dark:text-white">
                 <Subtitle title={'Bachelor of Science'} />
                 <div className='mb-4'>
                     <h2 className='font-bold'>Subject:</h2>

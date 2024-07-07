@@ -24,8 +24,9 @@ const ProjectDisplay = ({ img1, img2, title, description, github, live, img3, re
     return (
         <div className='bg-transparent w-full'>
 
-            <div className={reverse === true ? 'bg-white lg:h-[400px] flex flex-col lg:flex-row-reverse border border-black rounded-md' : 'bg-white lg:h-[400px] flex flex-col lg:flex-row border border-black rounded-md'}>
-                <div className='lg:w-4/6 rounded-md flex items-center justify-center w-full'>
+            <div className={reverse === true ? 'bg-white dark:bg-slate-950 dark:text-white lg:h-[400px] flex flex-col lg:flex-row-reverse border border-black dark:border-slate-300 rounded-md' : 'bg-white dark:bg-slate-950 lg:h-[400px] flex flex-col lg:flex-row border border-black dark:text-white dark:border-slate-300 rounded-md'}>
+
+                <div className='lg:w-4/6 rounded-t-md flex items-center justify-center w-full'>
                     <Swiper
                         spaceBetween={30}
                         centeredSlides={true}
@@ -43,17 +44,17 @@ const ProjectDisplay = ({ img1, img2, title, description, github, live, img3, re
                     >
                         <SwiperSlide>
                             <div className='bg-white w-full'>
-                                <img src={img1} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-r-md w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md  w-full object-top  hover:filter-none grayscale filter'} alt="" />
+                                <img src={img1} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-t-md lg:rounded-r-md rounded-b-none w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md rounded-b-none w-full object-top  hover:filter-none grayscale filter'} alt="" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='bg-white w-full'>
-                                <img src={img2} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-r-md w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md  w-full object-top  hover:filter-none grayscale filter'} alt="" />
+                                <img src={img2} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-t-md rounded-b-none lg:rounded-r-md  w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md rounded-b-none  w-full object-top  hover:filter-none grayscale filter'} alt="" />
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='bg-white w-full'>
-                                <img src={img3} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-r-md w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md  w-full object-top  hover:filter-none grayscale filter'} alt="" />
+                                <img src={img3} className={reverseInput === true ? 'h-60 lg:h-[399px] rounded-t-md rounded-b-none lg:rounded-r-md  w-full object-top object-cover hover:filter-none grayscale filter' : 'h-60 lg:h-[399px] object-cover lg:rounded-l-md rounded-t-md rounded-b-none  w-full object-top  hover:filter-none grayscale filter'} alt="" />
                             </div>
                         </SwiperSlide>
                     </Swiper>

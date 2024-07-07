@@ -17,7 +17,7 @@ const Main = () => {
         setIsNavOpen(!isNavOpen);
     };
     return (
-        <section className='overflow-hidden'>
+        <section className='overflow-hidden bg-white dark:bg-slate-900 dark:text-white'>
             <Toaster />
             <div className={isNavOpen ? 'flex z-50' : 'flex z-50'} >
 
